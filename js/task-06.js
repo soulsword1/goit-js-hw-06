@@ -6,7 +6,7 @@ function checkValidation(e) {
   const validLength = inputEl.getAttribute("data-length");
   const currentInputLength = e.currentTarget.value.length;
 
-  if (currentInputLength < validLength) {
+  if (currentInputLength < validLength || currentInputLength > validLength) {
     inputEl.classList.add("invalid");
     inputEl.classList.remove("valid");
     return;
